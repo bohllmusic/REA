@@ -5,6 +5,11 @@ body{
     color: #293241;
     
 }
+h1{
+    margin: 1vh ;
+
+}
+
 a{
     color: #293241;
 }
@@ -25,11 +30,13 @@ header{
 #search{
     height: 2.5vh; 
     margin-top: 2.5vh;
+    border-radius: 10px;
 }
 #loupe{
     margin-top: 2.5vh;
     margin-bottom: 0vh;
     height:2.5vh;
+ 
 }
 nav{
     background-color: #e0fbfc ;
@@ -55,7 +62,7 @@ span{
     display: flex;
     
     flex-direction: column;
-    justify-content: space-around;
+    
     border: solid 1px #3D405B;
     
     border-radius: 2em;
@@ -92,6 +99,14 @@ container{
     border-radius: 5px;  
 }
 
-.userImg{
+.userImg{ /*image utilisateur*/
     height: 3vh;
 }
+
+form{
+    padding: 1em;
+}
+ input  {
+     border-radius: 1vh;
+     height: 3vh;
+ }
