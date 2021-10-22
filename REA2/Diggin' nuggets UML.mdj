@@ -14623,7 +14623,7 @@
 											"top": 335,
 											"width": 489.10595703125,
 											"height": 13,
-											"text": "Vérifier si le psudo est deja pris et si les mots de passe choisis sont identiques"
+											"text": "Vérifier si le psudo est dispo et si les mots de passe choisis sont identiques"
 										},
 										{
 											"_type": "LabelView",
@@ -16305,7 +16305,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF749gE/wHibm0="
 							},
-							"name": "Vérifier si le psudo est deja pris et si les mots de passe choisis sont identiques"
+							"name": "Vérifier si le psudo est dispo et si les mots de passe choisis sont identiques"
 						},
 						{
 							"_type": "UMLAction",
@@ -16376,9 +16376,9 @@
 												"$ref": "AAAAAAF75DwRUwSDrtg="
 											},
 											"font": "Arial;13;0",
-											"left": 24.72998046875,
+											"left": 22.55908203125,
 											"top": 13,
-											"width": 115.9052734375,
+											"width": 102.791015625,
 											"height": 13,
 											"text": "SequenceDiagram1"
 										},
@@ -16391,7 +16391,7 @@
 											"font": "Arial;13;1",
 											"left": 5,
 											"top": 13,
-											"width": 14.72998046875,
+											"width": 12.55908203125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -17236,9 +17236,9 @@
 											},
 											"fillColor": "#d8f2ff",
 											"font": "Arial;13;0",
-											"left": 64.72998046875,
+											"left": 63.99365234375,
 											"top": 261,
-											"width": 133.26611328125,
+											"width": 122.3291015625,
 											"height": 13,
 											"text": "disponibilité du pseudo"
 										},
@@ -17252,7 +17252,7 @@
 											"font": "Arial;13;1",
 											"left": 45,
 											"top": 261,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -17286,7 +17286,7 @@
 															"font": "Arial;13;0",
 															"left": 60,
 															"top": 294,
-															"width": 82.3798828125,
+															"width": 77.99365234375,
 															"height": 13,
 															"text": "[si disponible ]"
 														}
@@ -17321,7 +17321,7 @@
 															"font": "Arial;13;0",
 															"left": 60,
 															"top": 373,
-															"width": 88.88623046875,
+															"width": 84.85546875,
 															"height": 13,
 															"text": "[si indisponible]"
 														}
@@ -17714,9 +17714,9 @@
 											},
 											"fillColor": "#d8f2ff",
 											"font": "Arial;13;0",
-											"left": 64.72998046875,
+											"left": 63.99365234375,
 											"top": 557,
-											"width": 58.05908203125,
+											"width": 56.96728515625,
 											"height": 13,
 											"text": "vérif MDP"
 										},
@@ -17730,7 +17730,7 @@
 											"font": "Arial;13;1",
 											"left": 45,
 											"top": 557,
-											"width": 14.72998046875,
+											"width": 13.99365234375,
 											"height": 13,
 											"text": "alt"
 										},
@@ -17764,7 +17764,7 @@
 															"font": "Arial;13;0",
 															"left": 60,
 															"top": 590,
-															"width": 89.3623046875,
+															"width": 84.59521484375,
 															"height": 13,
 															"text": "[mdp différents]"
 														}
@@ -17799,7 +17799,7 @@
 															"font": "Arial;13;0",
 															"left": 60,
 															"top": 633,
-															"width": 95.392578125,
+															"width": 88.45458984375,
 															"height": 13,
 															"text": "[mdp identiques]"
 														}
