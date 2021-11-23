@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap'); /* importation police 'Osqwald*/
+
+body{      
+    font-family: 'Oswald', sans-serif;  /*application police Oswald*/
+    color: #293241;
+    font-size: x-large;
+
+    
+}
+h1{
+    margin: 1vh ;
+
+}
+
+a{
+    color: #293241;
+}
+
+#logoHdr{
+    height: 3vh;
+}
+header{
+    background-color: #e0fbfc;
+    display:flex;
+    justify-content: space-between; 
+    border-radius: 2em; 
+    padding-left: 1em;
+    padding-right: 1em; 
+    border: solid 1px #3d5a80;
+}
+
+#search{
+    height: 2.5vh; 
+    margin-top: 2.5vh;
+    border-radius: 10px;
+}
+#loupe{
+    margin-top: 2.5vh;
+    margin-bottom: 0vh;
+    height:2.5vh;
+ 
+}
+nav{
+    background-color: #e0fbfc ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10vh;
+    border-radius: 2em;
+    border: solid 1px #3d5a80;
+}
+.navLinks{
+    color: #293241;
+    
+}
+.navLinks:hover{
+    background-color: #e0fbfc;
+    
+}
+
+span{
+
+    background-color: #e0fbfc;
+    display: flex;
+    
+    flex-direction: column;
+    
+    border: solid 1px #3D405B;
+    
+    border-radius: 2em;
+    margin: 1em;
+    
+    
+    
+}
+.spanLinks{
+    margin: 20px
+
+}
+
+.posts{
+    background-color: #e0fbfc;
+    border: solid 1px #3d5a80;
+    margin: 1em;
+    border-radius: 2em;
+    padding:1em;
+    backdrop-filter: blur(1em);
+    box-shadow: 10px 10px 10px rgb(0 0 0/ 0.2);
+}
+
+container{
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    
+}
+.shdw{
+    box-shadow: 10px 10px 10px rgb(0 0 0/ 0.2);
+}
+
+.bdRad{ /*arrondir coins*/
+    border-radius: 5px;  
+}
+
+.userImg{ /*image utilisateur*/
+    height: 3vh;
+}
+
+form{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ input  {
+     border-radius: 1vh;
+     height: 5vh;
+     width:40vh;
+     margin: 1vh;
+     font-size: large;
+     text-align: center;
+     
+ }
