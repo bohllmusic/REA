@@ -3,6 +3,16 @@
     include './connexionBDD.php';
     include './class_utilisateur.php';
 
+    $pseudo_utilisateur = "";
+    $mail_utilisateur = "";
+    $nom_utilisateur = "";
+    $prenom_utilisateur = "";
+    $mdp_utilisateur = "";
+    $age_utilisateur = "";
+    $photo_profil_utilisateur = "";
+    $bio_utilisateur= "";
+ 
+
     if (isset($_POST ['pseudo']) && isset($_POST['email']) && isset($_POST['nom']) &&
      isset($_POST['prenom']) && isset($_POST['mdp']) && isset($_POST['age'])) {
         $pseudo_utilisateur = $_POST['pseudo'];
@@ -14,10 +24,9 @@
         $photo_profil_utilisateur = $_POST['photo_profil'];
         $bio_utilisateur= $_POST['bio'];
     }
-    if($pseudo_utilisateur == null && $mail_utilisateur== null && $nom_utilisateur == null
-    && $prenom_utilisateur == null && $mdp_utilisateur==null && $age_utilisateur == null){
+    else{
         echo 'veuillez remplir les champs obligatoires, indiqués par une astérisque';
-    }else{
+    }
         try{
             $user = new Utilisateur();// je cree l'obet utilisateur 
             $user -> setPseudo($pseudo_utilisateur);// je remplis les attributs grace aux setter
@@ -34,7 +43,6 @@
         catch(Exception $e){ 
             die('erreur: '.$e->getMessage());
         }
-    }
 
     
 ?>

@@ -37,15 +37,11 @@
 
                 <input class="shdw" type="password" name = "mdpConfirm"placeholder="Confirmez votre mot de passe *">
                 <input class="shdw" type="number" name = "age"placeholder="indiquez votre âge *">
-                <input class="shdw" type="file" name = "photo_profil"placeholder="choisissez une photo de profil">
                 <input class="shdw" type="text" name = "bio"placeholder="présentez-vous brièvement">
-                
-                    
-                
-                            
-                
-                
                 <input class="shdw" type="submit" value="Confirmer"> <input class ="shdw" type="reset" value="Effacer">
+                <label for="photo_profil">Choisissez une photo de profil</label>
+                <input  type="file" name = "photo_profil"placeholder="choisissez une photo de profil">
+
         </span>
 
     </container>
