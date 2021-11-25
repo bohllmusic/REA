@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap'); /* importation police 'Osqwald*/
 
+html{
+    background-image: url(../REA3_site/images/vinyls-1182485.jpg);
+
+    --shadow:10px 10px 10px rgb(0 0 0/ 0.2);
+}
 body{      
     font-family: 'Oswald', sans-serif;  /*application police Oswald*/
-    color: #293241;
-    font-size: x-large;
+    color: #293241 ;
+    font-size: 1rem;
+    
+    
 
     
 }
+
 h1{
     margin: 1vh ;
 
@@ -20,32 +28,37 @@ a{
     height: 3vh;
 }
 header{
-    background-color: #e0fbfc;
+    background-color:#e0fbfc;
     display:flex;
     justify-content: space-between; 
-    border-radius: 2em; 
-    padding-left: 1em;
+    align-items: center;
+    border-radius: 30px; 
+    height: 7vh;
+    padding-left: 1vh;
     padding-right: 1em; 
     border: solid 1px #3d5a80;
+    box-shadow: var(--shadow);
 }
 
 #search{
     height: 2.5vh; 
+    width: 10vh;
     margin-top: 2.5vh;
     border-radius: 10px;
+
 }
 #loupe{
-    margin-top: 2.5vh;
-    margin-bottom: 0vh;
+    
+    
     height:2.5vh;
  
 }
 nav{
-    background-color: #e0fbfc ;
+    background-color:  #e0fbfc  ;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 10vh;
+    margin: 5vh;
     border-radius: 2em;
     border: solid 1px #3d5a80;
 }
@@ -74,7 +87,7 @@ span{
     
 }
 .spanLinks{
-    margin: 20px
+    margin: 20px;
 
 }
 
@@ -85,16 +98,13 @@ span{
     border-radius: 2em;
     padding:1em;
     backdrop-filter: blur(1em);
-    box-shadow: 10px 10px 10px rgb(0 0 0/ 0.2);
+    box-shadow: var(--shadow);
 }
 
 container{
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     
-}
-.shdw{
-    box-shadow: 10px 10px 10px rgb(0 0 0/ 0.2);
 }
 
 .bdRad{ /*arrondir coins*/
@@ -111,12 +121,12 @@ form{
     flex-direction: column;
     align-items: center;
 }
- input  {
-     border-radius: 1vh;
-     height: 5vh;
-     width:40vh;
-     margin: 1vh;
-     font-size: large;
-     text-align: center;
+input  {
+    border-radius: 1vh;
+    height: 5vh;
+    width:40vh;
+    margin: 1vh;
+    font-size: large;
+    text-align: center;
      
- }
+}

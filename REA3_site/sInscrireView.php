@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>S'inscrire</title>
-    <link rel="stylesheet" href="digginNuggets1.css">
+    <link rel="stylesheet" href="digginNuggets1_php.css">
     <link rel="icon" type="image/png" href="../REA3/images/kisspng-chicken-nugget-fried-chicken-chicken-fingers-fast-chicken-nuggets-clipart-5a8b06b4effbd2.362129591519060660983.png" />
 </head>
-<body>   
-    <header class="shdw">
-        <h1><img src="../REA3/images/kisspng-chicken-nugget-fried-chicken-chicken-fingers-fast-chicken-nuggets-clipart-5a8b06b4effbd2.362129591519060660983.png" alt="" id="logoHdr"><a href="../REA3/DnAccueil.html">Diggin' Nuggets</a></h1>
-        <h2>Inscription</h2>
-        <div><img src="../REA3/images/kisspng-magnifying-glass-computer-icons-clip-art-magnifying-glass-ico-5ab151010c51b2.1038397015215700490505 (1).png" alt="" id="loupe"><input type="text" placeholder="search..." id="search"></div>
-    </header>
+<body>
+    
+        <header class="shdw">
+           
+            <h1><img src="../REA3_site/images/kisspng-chicken-nugget-fried-chicken-chicken-fingers-fast-chicken-nuggets-clipart-5a8b06b4effbd2.362129591519060660983.png" alt="" id="logoHdr"><a href="../REA3/DnAccueil.html">Diggin' Nuggets</a></h1>
+            <h2>Inscription</h2>
+            <div ><img src="../REA3_site/images/kisspng-magnifying-glass-computer-icons-clip-art-magnifying-glass-ico-5ab151010c51b2.1038397015215700490505 (1).png" alt="" id="loupe"><input type="text" placeholder="search..." id="search"></div>
+            <nav class="shdw"><a href="../REA3/DnAccueil.html" class="navLinks">Accueil</a><a href="connexion.html" class="navLinks">Se connecter</a><a href="nousContacter.html"class="navLinks">Nous contacter</a></nav>
+            
+        </header>
 
-    <nav class="shdw"><a href="../REA3/DnAccueil.html" class="navLinks">Accueil</a><a href="connexion.html" class="navLinks">Se connecter</a><a href="nousContacter.html"class="navLinks">Nous contacter</a></nav>
 
     <container>
         <span class="shdw">
@@ -29,7 +32,7 @@
         </span>
         <span class="shdw">
             <form action="" method="POST">
-                <input class="shdw" type="text" name="pseudo" placeholder="choisissez un pseudo *" maxlength="20" minlength="2" id="prénom"> <p></p>
+                <input class="shdw" type="text" name="pseudo" placeholder="choisissez un pseudo *" maxlength="20" minlength="2" id="prénom"> 
                 <input class="shdw" type="email" name="email" placeholder="Votre mail *" max="20" minlength="2">
                 <input class="shdw" type="text" name="nom" placeholder="Prénom *" maxlength="20" minlength="2" >
                 <input class="shdw" type="text" name="prenom" placeholder="Nom *" maxlength="20" minlength="2" id="prénom">

@@ -77,36 +77,9 @@
             $this -> id_roles = $new_id_roles;
         }
 
-    //Constructeur
-        /* public __construct($id_utilisateur, $pseudo_utilisateur, 
-        $mail_utilisateur, $nom_utilisateur, $prenom_utilisateur,
-        $mdp_utilisateur, $age_utilisateur,$photo_profil_utilisateur,
-        $bio_utilisateur, $id_roles){
-            $this->id_utilisateur = $id_utilisateur;
-            $this->pseudo_utilisateur = $pseudo_utilisateur;
-            $this->mail_utilisateur = $mail_utilisateur;
-            $this->nom_utilisateur = $nom_utilisateur;
-            $this->prenom_utilisateur = $prenom_utilisateur;
-            $this->mdp_utilisateur = $mdp_utilisateur;
-            $this->age_utilisateur = $age_utilisateur;
-            $this->photo_profil_utilisateur = $photo_profil_utilisateur;
-            $this->bio_utilisateur = $bio_utilisateur;
-            $this->id_roles = $id_roles;
-        } */
-       
-
         //methode create user
-        public function createUtilisateur($bdd)
-        {   
-            //récuparation des valeurs de l'objet
-            $pseudo_utilisateur = $this->getPseudo();
-            $mail_utilisateur = $this->getMail();
-            $nom_utilisateur = $this->getNom();        
-            $prenom_utilisateur = $this->getPrenom();        
-            $mdp_utilisateur = $this->getMdp();        
-            $age_utilisateur = $this->getAge();        
-            $photo_profil_utilisateur = $this->getPhotoProfil();        
-            $bio_utilisateur = $this->getBio();        
+        public function createUtilisateur($bdd) {
+          
             
             try{
             
@@ -117,15 +90,15 @@
                 :age_utilisateur, :photo_profil_utilisateur, :bio_utilisateur)');
                 //éxécution de la requête SQL
                 $req->execute(array(
-                'pseudo_utilisateur' => $pseudo_utilisateur,
-                'mail_utilisateur' => $mail_utilisateur,
-                'nom_utilisateur' => $nom_utilisateur,                                                                 
-                'prenom_utilisateur' => $prenom_utilisateur,                                                                 
-                'mdp_utilisateur' => $mdp_utilisateur,                                                                 
-                'age_utilisateur' => $age_utilisateur,                                                                 
-                'photo_profil_utilisateur' => $photo_profil_utilisateur,                                                                 
-                'bio_utilisateur' => $bio_utilisateur                                                               
-            ));
+                    'pseudo_utilisateur' => $this->getPseudo(),
+                    'mail_utilisateur' => $this->getMail(),
+                    'nom_utilisateur' => $this->getNom(),                                                                 
+                    'prenom_utilisateur' => $this->getPrenom(),                                                                 
+                    'mdp_utilisateur' => $this->getMdp(),                                                                 
+                    'age_utilisateur' => $this->getAge(),                                                                 
+                    'photo_profil_utilisateur' => $this->getPhotoProfil(),                                                                 
+                    'bio_utilisateur' => $this->getBio()                                                               
+                ));
             }
             catch(Exception $e){
             
