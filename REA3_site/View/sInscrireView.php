@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../View/digginNuggets1.css">
     <title>S'inscrire</title>
-    <link rel="stylesheet" href="digginNuggets1_php.css">
-    <link rel="icon" type="image/png" href="../REA3/images/kisspng-chicken-nugget-fried-chicken-chicken-fingers-fast-chicken-nuggets-clipart-5a8b06b4effbd2.362129591519060660983.png" />
+    
+    <link rel="icon" type="image/png" href="../images/kisspng-chicken-nugget-fried-chicken-chicken-fingers-fast-chicken-nuggets-clipart-5a8b06b4effbd2.362129591519060660983.png" />
 </head>
 <body>
     
-        <header class="shdw">
-           
-            <h1><img src="../REA3_site/images/kisspng-chicken-nugget-fried-chicken-chicken-fingers-fast-chicken-nuggets-clipart-5a8b06b4effbd2.362129591519060660983.png" alt="" id="logoHdr"><a href="../REA3/DnAccueil.html">Diggin' Nuggets</a></h1>
-            <h2>Inscription</h2>
-            <div ><img src="../REA3_site/images/kisspng-magnifying-glass-computer-icons-clip-art-magnifying-glass-ico-5ab151010c51b2.1038397015215700490505 (1).png" alt="" id="loupe"><input type="text" placeholder="search..." id="search"></div>
-            <nav class="shdw"><a href="../REA3/DnAccueil.html" class="navLinks">Accueil</a><a href="connexion.html" class="navLinks">Se connecter</a><a href="nousContacter.html"class="navLinks">Nous contacter</a></nav>
-            
-        </header>
+    <header class="shdw">
+        <h1><img src="../images/kisspng-chicken-nugget-fried-chicken-chicken-fingers-fast-chicken-nuggets-clipart-5a8b06b4effbd2.362129591519060660983.png" alt="" id="logoHdr"><a href="../REA3/DnAccueil.html">Diggin' Nuggets</a></h1>
+        <h2>Inscription</h2>
+        <div ><img src="../images/kisspng-magnifying-glass-computer-icons-clip-art-magnifying-glass-ico-5ab151010c51b2.1038397015215700490505 (1).png" alt="" id="loupe"><input type="text" placeholder="search..." id="search"></div>
+        
+    </header>
+    <nav class="shdw">
+        <a href="../REA3/DnAccueil.html" class="navLinks">Accueil</a><a href="connexion.html" class="navLinks">Se connecter</a><a href="nousContacter.html"class="navLinks">Nous contacter</a>
+    </nav>
 
 
     <container>

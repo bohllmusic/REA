@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 23 nov. 2021 à 17:06
+-- Généré le : mar. 07 déc. 2021 à 16:25
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 8.0.10
 
@@ -149,7 +149,27 @@ CREATE TABLE `utilisateurs` (
 
 INSERT INTO `utilisateurs` (`id_utilisateur`, `pseudo_utilisateur`, `mail_utilisateur`, `nom_utilisateur`, `prenom_utilisateur`, `age_utilisateur`, `photo_profil_utilisateur`, `bio_utilisateur`, `id_roles`, `mdp_utilisateur`) VALUES
 (1, 'rtertherh', 'errthrthe@rger.zreze', 'erhrthret', 'ertherther', 24, '', '', NULL, 'ergergzer'),
-(2, 'CHALOUI', 'sdkjlds@lskdfjlsdj.dfzs', 'Jan-louis', 'Eugène', 26, '', '', NULL, 'c\'estLermotDepasse');
+(2, 'CHALOUI', 'sdkjlds@lskdfjlsdj.dfzs', 'Jan-louis', 'Eugène', 26, '', '', NULL, 'c\'estLermotDepasse'),
+(3, 'jean-louis', 'rregr@gdfg', 'fdfgd', 'dfgdfg', 21, '', '', NULL, 'dgfdfg'),
+(71, 'louloulou', 'hdghdfh@dfgds.gt', 'sdfgdfg', 'sgdsfg', 24, '', '', NULL, 'fgsdfdsf'),
+(72, 'louloulou', 'hdghdfh@dfgds.gt', 'sdfgdfg', 'sgdsfg', 24, '', '', NULL, 'fgsdfdsf'),
+(73, 'louloulou', 'hdghdfh@dfgds.gt', 'sdfgdfg', 'sgdsfg', 24, '', '', NULL, 'fgsdfdsf'),
+(74, 'louloulou', 'hdghdfh@dfgds.gt', 'sdfgdfg', 'sgdsfg', 24, '', '', NULL, 'fgsdfdsf'),
+(75, 'plouiool', 'ercv@dfvfvdf.fvf', 'dfvv', 'dfvdvd', 18, '', '', NULL, 'dfvdfvd'),
+(76, 'plouiool', 'ercv@dfvfvdf.fvf', 'dfvv', 'dfvdvd', 18, '', '', NULL, 'dfvdfvd'),
+(77, 'fhfghfg', 'fghfghf@fgfghf.fr', 'bnvvbn', 'vbvbnvbn', 19, '', '', NULL, 'vbvbnvbnvbn'),
+(80, 'blabla', 'ejh@dkjhfskdj.fr', 'michel', 'polnaref', 21, '', '', NULL, 'mdptest'),
+(81, 'fgfhddhdf', 'kjqshflkjshfsfkhiu@ujgfjhgfjhg', 'qdsmhldkfjhddfg', 'stg( hg-t', 20, '', '', NULL, 'lalala'),
+(82, 'ghjghjghg', 'ercv@dfvfvdf.fvf', 'tghfghfgh', 'fghfghfg', 22, '', '', NULL, 'lalala'),
+(83, 'klfdjhlh', 'testest@test.test', 'kjfdshfsqlkj', 'kjfhlqkds', 20, '', '', NULL, '789654'),
+(84, 'hnncvb', 'test@test.test', 'hfgdhfgd', 'dhfdfg', 21, '', '', NULL, '789654'),
+(85, 'sdfg', 'testjespere@xn--queava-yua.marcher', 'dsfsdfgdsf', 'sdfgdf', 19, '', '', NULL, '789654'),
+(86, 'utilisateur', 'mailmail@mail.mail', 'qdsfs', 'nomqsdfsd', 18, '', '', NULL, '789654'),
+(87, 'dffghdhf', 'fghfdhfd@sdfgsfd.sdgdfgdsfjkui', 'dflkjhdf', 'sfdkljdhng', 18, '', '', NULL, '789654'),
+(88, 'jean cleaudes225', 'lksjlsfdj@hkdsq.sfqd', 'ldkfsd', 'sdlkjldsk', 72, '', '', NULL, '456321'),
+(89, 'pwdtest', 'pwd@test.test', 'kkjhkdjfh', 'ldfkdflkj', 19, '', '', NULL, '$2y$10$iTzIeUIlnGSchaG1B7Nb4uRAgilWANMyxtaSb9gAVB5axQb6WmWx.'),
+(90, 'usertest', 'mailtest@password.test', 'fg', 'dfqsdfqs', 20, '', '', NULL, '$2y$10$rolVKFk0d/3iGygj724nJuJiNsq1PL0.RyQMHiQ5.bx1UgIF7s5TS'),
+(91, 'fgfgdfhdhfg', 'dghh@dfhdf.dfhd', 'dfhdgh', 'dfgdfh', 19, '', '', NULL, '$2y$10$dLnly5gE4YF6gplzhwEA3O8VUNLsw1SbuEsLcAopOgHHz4eFlGVDq');
 
 --
 -- Index pour les tables déchargées
@@ -270,7 +290,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- Contraintes pour les tables déchargées

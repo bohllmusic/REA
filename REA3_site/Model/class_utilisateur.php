@@ -76,35 +76,76 @@
         public function setIdRoles($new_id_roles){
             $this -> id_roles = $new_id_roles;
         }
+        //methode testDispo
+        public function testDispo($bdd){
+            //requete select pour verifier si l'adresse mail et le pseudo sont deja utilisés
+              //adresse mail:
+            $reqSelectMail= $bdd->prepare ('SELECT * FROM utilisateurs WHERE mail_utilisateur = :mail_utilisateur');
+            $reqSelectMail -> execute(array(':mail_utilisateur'=>$this->getMail()));
+            $dispoMail=$reqSelectMail->fetch();
+              //pseudo:
+            $reqSelectPseudo= $bdd->prepare ('SELECT * FROM utilisateurs WHERE pseudo_utilisateur = :pseudo_utilisateur');
+            $reqSelectPseudo->execute(array(':pseudo_utilisateur' =>$this->getPseudo()));
+            $dispoPseudo=$reqSelectPseudo->fetch();
+            if ($dispoMail){
+            
+                echo 'Un compte est déjà enregistré avec cette adresse mail.';
+                return false;
+            }else if ($dispoPseudo) {
+                echo 'Ce pseudo est déjà utilisé.';
+                return false;
+            }else{
+                return true;
+            }
+        }
 
         //methode create user
         public function createUtilisateur($bdd) {
           
-            
+              
             try{
             
                 //requête ajout d'un utilisateur
-                $req = $bdd->prepare('INSERT INTO utilisateurs (pseudo_utilisateur, mail_utilisateur, nom_utilisateur, prenom_utilisateur,
+                $reqInsert = $bdd->prepare('INSERT INTO utilisateurs (pseudo_utilisateur, mail_utilisateur, nom_utilisateur, prenom_utilisateur,
                 mdp_utilisateur, age_utilisateur, photo_profil_utilisateur, bio_utilisateur) 
                 VALUES (:pseudo_utilisateur, :mail_utilisateur, :nom_utilisateur, :prenom_utilisateur, :mdp_utilisateur, 
                 :age_utilisateur, :photo_profil_utilisateur, :bio_utilisateur)');
                 //éxécution de la requête SQL
-                $req->execute(array(
+
+
+                $reqInsert->execute(array(
                     'pseudo_utilisateur' => $this->getPseudo(),
                     'mail_utilisateur' => $this->getMail(),
                     'nom_utilisateur' => $this->getNom(),                                                                 
                     'prenom_utilisateur' => $this->getPrenom(),                                                                 
-                    'mdp_utilisateur' => $this->getMdp(),                                                                 
+                    'mdp_utilisateur' => password_hash($this->getMdp(), PASSWORD_DEFAULT), //hachage mdp                                                                
                     'age_utilisateur' => $this->getAge(),                                                                 
                     'photo_profil_utilisateur' => $this->getPhotoProfil(),                                                                 
                     'bio_utilisateur' => $this->getBio()                                                               
                 ));
+              
             }
             catch(Exception $e){
             
                 //affichage d'une exception en cas d’erreur
                 die('Erreur : '.$e->getMessage());
             }        
+        }
+
+        //methode connexion
+        public function connectUser($bdd){
+            $reqSelectLogin= $bdd->prepare ('SELECT * FROM utilisateurs WHERE mail_utilisateur = :mail_utilisateur');
+            $reqSelectLogin -> execute(array(':mail_utilisateur'=>$this->getMail()));
+            $login=$reqSelectLogin->fetch();
+            if($login){
+                if(password_verify($this->getMdp(),$login['mdp_utilisateur'])=== true){
+                    return true;
+                }else {
+                    return false;
+                }
+            }else {
+                return false;
+            }
         }
     }
 
