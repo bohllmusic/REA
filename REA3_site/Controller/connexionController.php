@@ -1,4 +1,5 @@
-<?php
+<?php  
+    
     include '../View/connexionView.php';
     include '../connexionBDD.php';
     include '../Model/class_utilisateur.php';
@@ -15,6 +16,7 @@
             error.innerHTML= "Identifiants incorrects."</script>';
         }
         
+
     }
 
 ?>

@@ -1,6 +1,6 @@
 
 <?php
-
+    session_start();//j'ouvre la session
     include '../View/sInscrireView.php';
     include '../connexionBDD.php';
     include '../Model/class_utilisateur.php';
@@ -25,7 +25,7 @@
                     
                     if($user->testDispo($bdd)==true){
                         $user->createUtilisateur($bdd);// exécution de la fonction qui crée un utilisarteur dans la bdd
-                        header("Location: ../Controller/accueilController.php");  
+                        $user->openSession($bdd)
                     }
                 }
                 catch(Exception $e){ 

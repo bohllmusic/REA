@@ -1,4 +1,6 @@
 <?php 
+  
+    
     class Utilisateur{
         private $id_utilisateur;
         private $pseudo_utilisateur;
@@ -143,10 +145,13 @@
                 }else {
                     return false;
                 }
-            }else {
+            }
+            
+            else{
                 return false;
             }
         }
+
     }
 
 
