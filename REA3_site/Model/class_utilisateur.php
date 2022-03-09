@@ -78,6 +78,7 @@
         public function setIdRoles($new_id_roles){
             $this -> id_roles = $new_id_roles;
         }
+
         //methode testDispo
         public function testDispo($bdd){
             //requete select pour verifier si l'adresse mail et le pseudo sont deja utilisés
@@ -91,10 +92,10 @@
             $dispoPseudo=$reqSelectPseudo->fetch();
             if ($dispoMail){
             
-                echo 'Un compte est déjà enregistré avec cette adresse mail.';
+                //Un compte est déjà enregistré avec cette adresse mail.
                 return false;
             }else if ($dispoPseudo) {
-                echo 'Ce pseudo est déjà utilisé.';
+                //Ce pseudo est déjà utilisé.
                 return false;
             }else{
                 return true;
@@ -132,7 +133,7 @@
                 //affichage d'une exception en cas d’erreur
                 die('Erreur : '.$e->getMessage());
             }        
-        }
+        } 
 
         //methode connexion
         public function connectUser($bdd){

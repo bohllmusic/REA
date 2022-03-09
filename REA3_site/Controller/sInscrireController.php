@@ -1,6 +1,6 @@
 
 <?php
-    session_start();//j'ouvre la session
+    //session_start();               j'ouvre la session
     include '../View/sInscrireView.php';
     include '../connexionBDD.php';
     include '../Model/class_utilisateur.php';
@@ -14,18 +14,19 @@
             if ($_POST['mdpConfirm']==$_POST['mdp']){
                 try{
                     $user = new Utilisateur();// je cree l'obet utilisateur 
-                    $user -> setPseudo($_POST['pseudo']);// je remplis les attributs grace aux setter
-                    $user -> setMail($_POST['email']);
-                    $user -> setNom($_POST['nom']);
-                    $user -> setPrenom($_POST['prenom']);
-                    $user -> setMdp($_POST['mdp']);
-                    $user -> setAge($_POST['age']);
-                    $user -> setPhotoProfil($_POST['photo_profil']);
-                    $user -> setBio($_POST['bio']);
+                    $user -> setPseudo(htmlspecialchars($_POST['pseudo']));// je remplis les attributs grace aux setter
+                    $user -> setMail(htmlspecialchars($_POST['email']));
+                    $user -> setNom(htmlspecialchars($_POST['nom']));
+                    $user -> setPrenom(htmlspecialchars($_POST['prenom']));
+                    $user -> setMdp(htmlspecialchars($_POST['mdp']));
+                    $user -> setAge(htmlspecialchars($_POST['age']));
+                    $user -> setPhotoProfil(htmlspecialchars($_POST['photo_profil']));
+                    $user -> setBio(htmlspecialchars($_POST['bio']));
                     
                     if($user->testDispo($bdd)==true){
                         $user->createUtilisateur($bdd);// exécution de la fonction qui crée un utilisarteur dans la bdd
-                        $user->openSession($bdd)
+                        /* $user->openSession($bdd); */
+                        header("Location: ../Controller/accueilController.php");
                     }
                 }
                 catch(Exception $e){ 
@@ -33,8 +34,5 @@
                 }
             }else {echo 'les deux mots de passes saisis sont différents';}
         }else {echo 'veuillez remplir les champs obligatoires, indiqués par une astérisque';};
-
-    }
-
-    
+    }  
 ?>

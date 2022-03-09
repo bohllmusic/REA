@@ -13,7 +13,7 @@
         <div><img src="../REA3/images/kisspng-magnifying-glass-computer-icons-clip-art-magnifying-glass-ico-5ab151010c51b2.1038397015215700490505 (1).png" alt="" id="loupe"><input type="text" placeholder="search..." id="search"></div>
     </header>
 
-    <nav class="shdw"><a href="../Controller/accueilController.php" class="navLinks">Accueil</a><a href="connexion.html" class="navLinks">Se connecter</a><a href="nousContacter.html"class="navLinks">Nous contacter</a></nav>
+    <nav class="shdw"><a href="../Controller/accueilController.php" class="navLinks">Accueil</a><a href="connexion.html" class="navLinks">S'inscrire</a><a href="nousContacter.html"class="navLinks">Nous contacter</a></nav>
 
     <container>
         <span class="shdw">
