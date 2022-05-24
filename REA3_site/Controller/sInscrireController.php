@@ -14,14 +14,14 @@
             if ($_POST['mdpConfirm']==$_POST['mdp']){
                 try{
                     $user = new Utilisateur();// je cree l'obet utilisateur 
-                    $user -> setPseudo(htmlspecialchars($_POST['pseudo']));// je remplis les attributs grace aux setter
-                    $user -> setMail(htmlspecialchars($_POST['email']));
-                    $user -> setNom(htmlspecialchars($_POST['nom']));
-                    $user -> setPrenom(htmlspecialchars($_POST['prenom']));
-                    $user -> setMdp(htmlspecialchars($_POST['mdp']));
-                    $user -> setAge(htmlspecialchars($_POST['age']));
-                    $user -> setPhotoProfil(htmlspecialchars($_POST['photo_profil']));
-                    $user -> setBio(htmlspecialchars($_POST['bio']));
+                    $user -> setPseudo(striptags(htmlspecialchars($_POST['pseudo'])));// je remplis les attributs grace aux setter
+                    $user -> setMail(striptags(htmlspecialchars($_POST['email'])));
+                    $user -> setNom(striptags(htmlspecialchars($_POST['nom'])));
+                    $user -> setPrenom(striptags(htmlspecialchars($_POST['prenom'])));
+                    $user -> setMdp(striptags(htmlspecialchars($_POST['mdp'])));
+                    $user -> setAge(striptags(htmlspecialchars($_POST['age'])));
+                    $user -> setPhotoProfil(striptags(htmlspecialchars($_POST['photo_profil'])));
+                    $user -> setBio(striptags(htmlspecialchars($_POST['bio'])));
                     
                     if($user->testDispo($bdd)==true){
                         $user->createUtilisateur($bdd);// exécution de la fonction qui crée un utilisarteur dans la bdd
