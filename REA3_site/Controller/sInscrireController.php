@@ -14,14 +14,14 @@
             if ($_POST['mdpConfirm']==$_POST['mdp']){
                 try{
                     $user = new Utilisateur();// je cree l'obet utilisateur 
-                    $user -> setPseudo(striptags(htmlspecialchars($_POST['pseudo'])));// je remplis les attributs grace aux setter
-                    $user -> setMail(striptags(htmlspecialchars($_POST['email'])));
-                    $user -> setNom(striptags(htmlspecialchars($_POST['nom'])));
-                    $user -> setPrenom(striptags(htmlspecialchars($_POST['prenom'])));
-                    $user -> setMdp(striptags(htmlspecialchars($_POST['mdp'])));
-                    $user -> setAge(striptags(htmlspecialchars($_POST['age'])));
-                    $user -> setPhotoProfil(striptags(htmlspecialchars($_POST['photo_profil'])));
-                    $user -> setBio(striptags(htmlspecialchars($_POST['bio'])));
+                    $user -> setPseudo(strip_tags(htmlspecialchars($_POST['pseudo'])));// je remplis les attributs grace aux setter
+                    $user -> setMail(strip_tags(htmlspecialchars($_POST['email'])));
+                    $user -> setNom(strip_tags(htmlspecialchars($_POST['nom'])));
+                    $user -> setPrenom(strip_tags(htmlspecialchars($_POST['prenom'])));
+                    $user -> setMdp(strip_tags(htmlspecialchars($_POST['mdp'])));
+                    $user -> setAge(strip_tags(htmlspecialchars($_POST['age'])));
+                    $user -> setPhotoProfil(strip_tags(htmlspecialchars($_POST['photo_profil'])));
+                    $user -> setBio(strip_tags(htmlspecialchars($_POST['bio'])));
                     
                     if($user->testDispo($bdd)==true){
                         $user->createUtilisateur($bdd);// exécution de la fonction qui crée un utilisarteur dans la bdd

@@ -10,9 +10,7 @@
     function getId_publi(){
 		return $this->id_publi;
 	}
-	function setId_publi($id_publi){
-		$this->id_publi = $id_publi;
-	}
+	
 	function getTexte_publi(){
 		return $this->texte_publi;
 	}
@@ -46,7 +44,10 @@
 
 //METHODES
 
-    function create_publi($bdd)
-        
+/*     public function create_publi($bdd){
+		/* je veux que si le genre saisi est déja present dans la bdd
+		alors je fais la relation avec celui existant, si il n'existe pas alors 
+		je l'enregistre dans la bdd et fais la relation */
+       
 }
 ?>

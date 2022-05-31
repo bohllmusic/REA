@@ -48,9 +48,6 @@
 
     //SETTERS
 
-        public function setId($new_id_utilisateur){
-            $this -> id_utilisateur = $new_id_utilisateur;
-        }
         public function setPseudo($new_pseudo_utilisateur){
             $this -> pseudo_utilisateur = $new_pseudo_utilisateur;
         }
