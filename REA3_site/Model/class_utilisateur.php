@@ -80,18 +80,18 @@
         public function testDispo($bdd){
             //requete select pour verifier si l'adresse mail et le pseudo sont deja utilisés
               //adresse mail:
-            $reqSelectMail= $bdd->prepare ('SELECT * FROM utilisateurs WHERE mail_utilisateur = :mail_utilisateur');
-            $reqSelectMail -> execute(array(':mail_utilisateur'=>$this->getMail()));
-            $dispoMail=$reqSelectMail->fetch();
+            $reqSelectMail= $bdd->prepare ('SELECT mail_utilisateur FROM utilisateurs WHERE mail_utilisateur = :mail_utilisateur');
+            $reqSelectMail -> execute(array(':mail_utilisateur'=>$this->mail_utilisateur()));
+            $verifMail=$reqSelectMail->fetch();
               //pseudo:
-            $reqSelectPseudo= $bdd->prepare ('SELECT * FROM utilisateurs WHERE pseudo_utilisateur = :pseudo_utilisateur');
-            $reqSelectPseudo->execute(array(':pseudo_utilisateur' =>$this->getPseudo()));
-            $dispoPseudo=$reqSelectPseudo->fetch();
-            if ($dispoMail){
+            $reqSelectPseudo= $bdd->prepare ('SELECT pseudo_utilisateur FROM utilisateurs WHERE pseudo_utilisateur = :pseudo_utilisateur');
+            $reqSelectPseudo->execute(array(':pseudo_utilisateur' =>$this->pseudo_utilisateur()));
+            $verifPseudo=$reqSelectPseudo->fetch();
+            if ($verifMail){
             
                 //Un compte est déjà enregistré avec cette adresse mail.
                 return false;
-            }else if ($dispoPseudo) {
+            }else if ($verifPseudo) {
                 //Ce pseudo est déjà utilisé.
                 return false;
             }else{
@@ -100,11 +100,8 @@
         }
 
         //methode create user
-        public function createUtilisateur($bdd) {
-          
-              
-            try{
-            
+        public function createUtilisateur($bdd) {     
+           
                 //requête ajout d'un utilisateur
                 $reqInsert = $bdd->prepare('INSERT INTO utilisateurs (pseudo_utilisateur, mail_utilisateur, nom_utilisateur, prenom_utilisateur,
                 mdp_utilisateur, age_utilisateur, photo_profil_utilisateur, bio_utilisateur) 
@@ -112,24 +109,18 @@
                 :age_utilisateur, :photo_profil_utilisateur, :bio_utilisateur)');
                 //éxécution de la requête SQL
 
-
                 $reqInsert->execute(array(
-                    'pseudo_utilisateur' => $this->getPseudo(),
-                    'mail_utilisateur' => $this->getMail(),
-                    'nom_utilisateur' => $this->getNom(),                                                                 
-                    'prenom_utilisateur' => $this->getPrenom(),                                                                 
-                    'mdp_utilisateur' => password_hash($this->getMdp(), PASSWORD_DEFAULT), //hachage mdp                                                                
-                    'age_utilisateur' => $this->getAge(),                                                                 
-                    'photo_profil_utilisateur' => $this->getPhotoProfil(),                                                                 
+                    'pseudo_utilisateur' => $this->pseudo_utilisateur,
+                    'mail_utilisateur' => $this->mail_utilisateur(),
+                    'nom_utilisateur' => $this->nom_utilisateur(),                                                                 
+                    'prenom_utilisateur' => $this->prenom_utilisateur(),                                                                 
+                    'mdp_utilisateur' => password_hash($this->mdp_utilisateur(), PASSWORD_DEFAULT), //hachage mdp                                                                
+                    'age_utilisateur' => $this->age_utilisateur(),                                                                 
+                    'photo_profil_utilisateur' => $this->photo_profil_utilisateur(),                                                                 
                     'bio_utilisateur' => $this->getBio()                                                               
                 ));
               
             }
-            catch(Exception $e){
-            
-                //affichage d'une exception en cas d’erreur
-                die('Erreur : '.$e->getMessage());
-            }        
         } 
 
         //methode connexion

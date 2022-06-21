@@ -22,14 +22,14 @@
 
     <container>
         <span class="shdw">
-            <a href="" class="spanLinks">House</a>
             <a href="" class="spanLinks">article recent</a>
             <a href="" class="spanLinks">article recent</a>
-            <a href="" class="spanLinks">BASS</a>
-            <a href="" class="spanLinks">Dubstep</a>
-            <a href="" class="spanLinks">Jungle</a>
-            <a href="" class="spanLinks">Breakbeat</a>
-            <a href="" class="spanLinks">Electro</a>
+            <a href="" class="spanLinks">article recent</a>
+            <a href="" class="spanLinks">article recent</a>
+            <a href="" class="spanLinks">article recent</a>
+            <a href="" class="spanLinks">article recent</a>
+            <a href="" class="spanLinks">article recent</a>
+            <a href="" class="spanLinks">article recent</a>
 
         </span>
         <span class="shdw">
@@ -46,6 +46,7 @@
                 <label for="photo_profil">Choisissez une photo de profil</label>
                 <input  type="file" name = "photo_profil"placeholder="choisissez une photo de profil">
                 <input class="shdw" type="submit" value="Confirmer"> <input class ="shdw" type="reset" value="Effacer">
+            </form>
 
         </span>
 

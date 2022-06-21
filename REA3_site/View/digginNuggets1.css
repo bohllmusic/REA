@@ -124,9 +124,12 @@ form{
 input  {
     border-radius: 1vh;
     height: 5vh;
-    width:40vh;
+    width:40vw;
     margin: 1vh;
     font-size: large;
     text-align: center;
      
+}
+.shdw {
+    box-shadow: 10px 5px 15px black;
 }
